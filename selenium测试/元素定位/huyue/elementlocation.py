@@ -7,7 +7,7 @@ driver.get("https://www.baidu.com/")  # 输入百度网址
 
 # 最大化浏览器
 driver.maximize_window()
-time.sleep(6)
+time.sleep(3)
 
 # 使用属性进行定位的时候, 这个对象的属性必须是唯一的
 
@@ -43,9 +43,26 @@ time.sleep(6)
 # driver.find_element_by_xpath("//*[@id='su']").click()
 
 # 使用 css selecter 定位
-driver.find_element_by_css_selector("#kw").send_keys("李现")
-driver.find_element_by_css_selector("#su").click()
+# driver.find_element_by_css_selector("#kw").send_keys("李现")
+# driver.find_element_by_css_selector("#su").click()
+# time.sleep(3)
 
+
+# 清除搜索内容(clear)
+# driver.find_element_by_id("kw").clear()
+# time.sleep(3)
+# 重新搜索
+driver.find_element_by_id("kw").send_keys(u"吴亦凡")
+# 提交查询内容(submit)
+driver.find_element_by_id("su").submit()
+
+# 输出定位元素的内容(text)
+# text = driver.find_element_by_xpath("//*[@id='bottom_layer']/div[1]").text
+# print("text = " + text)
+
+
+# 打印 title（driver.title）
+# 打印 url（driver.current_url）
 
 time.sleep(6)
 driver.quit()
