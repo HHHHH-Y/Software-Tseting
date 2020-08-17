@@ -22,7 +22,8 @@ class Baidu2(unittest.TestCase):
         driver.find_element_by_link_text("新闻").click()
         time.sleep(6)
 
-
+    # 忽略测试用例执行
+    @unittest.skip("skipping")
     def test_baidusearch(self):
         driver = self.driver
         driver.get(self.base_url)

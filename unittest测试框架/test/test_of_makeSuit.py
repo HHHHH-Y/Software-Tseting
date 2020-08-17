@@ -7,7 +7,7 @@ from test import Baidu0816_2
 # suite. addTest(unittest.makeSuite(文件名.类名))
 
 
-def createSuite() :
+def createsuite() :
 
     suite = unittest.TestSuite()
 
@@ -17,6 +17,6 @@ def createSuite() :
     return suite
 
 if __name__ == "__main__":
-    suite = createSuite()
+    suite = createsuite()
     runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
